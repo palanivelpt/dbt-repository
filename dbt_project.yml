@@ -18,6 +18,8 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+
+target-path: "target"
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -34,3 +36,5 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+tests:
+  +severity: warn
